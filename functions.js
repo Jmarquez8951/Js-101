@@ -19,3 +19,21 @@ const dogBreed = (dog) => {
 
 
 console.log(dogBreed('lab'));
+
+// Challenge 1
+
+const fortyTwo = (number) => {
+    const output = number + 42;
+    return output;
+};
+
+console.log(fortyTwo(8));
+
+// Challenge 2
+
+const oldAge = (year) => {
+    const output = 2099 - year;
+    return output;
+};
+
+console.log(oldAge(1954));
