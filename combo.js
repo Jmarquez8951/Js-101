@@ -7,7 +7,7 @@ const evenOdd = (num) => {
     };
 };
 
-console.log(evenOdd(3));
+console.log('evenOdd',evenOdd(3));
 
 
 // Challenge 2
@@ -15,12 +15,37 @@ const findOpposite = (num) => {
     num = -num;
     return num;
 };
-console.log(findOpposite(7));
+console.log('findOpposite',findOpposite(7));
+console.log('findOpposite',findOpposite(-10));
+console.log('findOpposite',findOpposite(-333));
+console.log('findOpposite',findOpposite(4));
+
+
+
 
 
 // Challenge 3
 const palindrome = (str) => {
-    return str == str.split('').reverse().join('');
+    const cleanText = str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()+ ]/g,"");
+    const opp = cleanText.split('').reverse().join('');
+    if (cleanText === opp) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
-console.log(palindrome('racecar')); // true
+console.log('palindrome',palindrome('R-ac+E cAr. ')); // true
+
+
+// Challenge 4
+const animal = (str) => {
+    if (str.toLowerCase() === "alligator"){
+        return "Small";
+    } else {
+        return "Wide";
+    }
+};
+
+console.log('animal',animal("Frog"));
+console.log('animal',animal("aLligator"));
